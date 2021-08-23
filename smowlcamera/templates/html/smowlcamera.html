@@ -1,0 +1,8 @@
+<div class="smowlcamera_block">
+{% if has_settings %}
+    <iframe id="urlFinal" allow="microphone; camera" sandbox="allow-top-navigation allow-scripts allow-modals allow-same-origin"   class="smowlcamera" width="100%" height="310px" frameborder="0" src=""></iframe>
+{% else %}
+    <p>La configuración interna del componente <strong>no se ha configurado correctamente</strong>.</p>
+    <p>Contáctese con mesa de ayuda <strong><a href="/contact_form">presionando aquí</a></strong>.</p>
+{% endif %}
+</div>
