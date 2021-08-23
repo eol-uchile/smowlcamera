@@ -1,5 +1,5 @@
 /* Javascript for SMOWLCAMERA*/
-function IframeWithAnonymousIDXBlock(runtime, element, settings) {
+function SmowlCameraXblock(runtime, element, settings) {
     $(function ($) {
         if (settings.has_settings){
             var url2222 = window.location.href;

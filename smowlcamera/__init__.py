@@ -1,1 +1,1 @@
-from .smowlcamera import IframeWithAnonymousIDXBlock
+from .smowlcamera import SmowlCameraXblock

@@ -32,7 +32,7 @@ setup(
     ],
     entry_points={
         'xblock.v1': [
-            'smowlcamera = smowlcamera:IframeWithAnonymousIDXBlock',
+            'smowlcamera = smowlcamera:SmowlCameraXblock',
         ],
         "lms.djangoapp": [
             "smowlcamera = smowlcamera.apps:SmowlCameraConfig",

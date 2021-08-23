@@ -25,7 +25,7 @@ import logging
 log = logging.getLogger(__name__)
 
 
-class IframeWithAnonymousIDXBlock(XBlock):
+class SmowlCameraXblock(XBlock):
     """
     XBlock displaying an iframe, with an anonymous ID passed in argument
     """
@@ -91,7 +91,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
         frag.add_css(self.resource_string("static/css/smowlcamera.css"))
         frag.add_javascript(self.resource_string(
             "static/js/src/smowlcamera-author.js"))
-        frag.initialize_js('IframeWithAnonymousIDXBlock', json_args=settings)
+        frag.initialize_js('SmowlCameraXblock', json_args=settings)
         return frag
 
 
@@ -102,7 +102,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
         """
 
         #runtime = TestRuntime(services={'field-data': DictFieldData({})})
-        #block = IframeWithAnonymousIDXBlock(runtime, scope_ids=Mock(spec=ScopeIds))
+        #block = SmowlCameraXblock(runtime, scope_ids=Mock(spec=ScopeIds))
         #parent = block.get_parent()
 
         #url_response = self.request.GET
@@ -151,7 +151,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
         frag.add_css(self.resource_string("static/css/smowlcamera.css"))
         frag.add_javascript(self.resource_string(
             "static/js/src/smowlcamera.js"))
-        frag.initialize_js('IframeWithAnonymousIDXBlock', json_args=settings)
+        frag.initialize_js('SmowlCameraXblock', json_args=settings)
         return frag
 
     def studio_view(self, context=None):
@@ -163,7 +163,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
             '/templates/html/smowlcamera-edit.html'))
         frag.add_javascript(self.resource_string(
             "static/js/src/smowlcamera-edit.js"))
-        frag.initialize_js('IframeWithAnonymousIDXBlock')
+        frag.initialize_js('SmowlCameraXblock')
         return frag
 
     def check_settings(self):
@@ -181,7 +181,7 @@ class IframeWithAnonymousIDXBlock(XBlock):
     def workbench_scenarios():
         """A canned scenario for display in the workbench."""
         return [
-            ("IframeWithAnonymousIDXBlock",
+            ("SmowlCameraXblock",
              """
 			 """),
         ]
