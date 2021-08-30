@@ -65,16 +65,9 @@ class SmowlCameraXblock(XBlock):
         context = {
                 'has_settings': False
             }
+        settings = {}
         if self.check_settings():
             context['has_settings'] = True
-            settings = {
-                'course_id': str(self.course_id),
-                'NombreEntidad': DJANGO_SETTINGS.SMOWL_ENTITY,
-                'swlLicenseKey': DJANGO_SETTINGS.SMOWL_KEY,
-                'InsertEDXPOST_URL': DJANGO_SETTINGS.SMOWLCAMERA_INSERTEDXPOST_URL,
-                'parent': self.parent,
-                'has_settings': True
-            }
         else:
             lms_base = SiteConfiguration.get_value_for_org(
                 self.location.org,
@@ -82,9 +75,6 @@ class SmowlCameraXblock(XBlock):
                 DJANGO_SETTINGS.LMS_BASE
             )
             context['help_url'] = 'https://{}/{}'.format(lms_base, 'contact_form')
-            settings = {
-                'has_settings': False
-            }
         frag = Fragment()
         frag.add_content(render_template(
             '/templates/html/smowlcamera-author.html', context))
